@@ -1,0 +1,15 @@
+#Language : AMPL
+#Type     : Driver 
+#Origin   : September 26 2018
+#Location : Houston Methodist Research Institute
+#Developer: Javier Ruiz Ramirez
+#Description: Assignment of resources/materials to compartments/warehouses
+#Application: Possible use in distributing cells to lymph nodes
+
+reset;
+model   ap.mod;
+data    ap.dat;
+option  solver cplex;
+solve;
+display x;
+
